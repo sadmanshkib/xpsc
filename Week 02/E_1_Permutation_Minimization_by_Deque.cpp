@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        deque<int> q;
+        for (int i = 0; i < n; i++)
+        {
+            int x;
+            cin >> x;
+            if(q.empty())
+            {
+                q.push_back(x);
+            }
+            else
+            {
+                if(x < q.front())
+                q.push_front(x);
+            else
+                q.push_back(x);
+            }
+        }
+        
+        for(int x : q)
+            cout << x << " ";
+        cout << endl;
+    }
+    
+    return 0;
+}
