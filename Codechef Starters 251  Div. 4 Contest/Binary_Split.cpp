@@ -29,7 +29,7 @@ int main()
                 cur += s[r];
                 r++;
             }
-            // cout << cur << endl;
+            cout << cur << endl;
 
             ans = min(ans, cur);
         }
